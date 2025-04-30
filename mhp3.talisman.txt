@@ -1,0 +1,175 @@
+
+--------------------------------
+[0 Slot / skill 1 is the right address]
+--------------------------------
+0001 = Torso Up
+0101 = Torso Up / Poison
+0202 = Poison / Sleep
+0303 = Paralysis / Mud/Snow
+0404 = Sleep / Health
+0505 = Stun / Sharpness
+0606 = Mud/Snow / Fencing
+0707 = Sense / Sharpener
+0808 = Health / Guard Up
+0909 = Rec Speed / Reload Spd
+0A0A = Sharpness / Normal Up
+0B0B = Handicraft / Pellet Up
+0C0C = Fencing / Pierce S+
+0D0D = Expert / Crag S+
+0E0E = Sharpener / Status
+0F0F = Guard / Bomb Boost
+--------------------------------
+1010 = Guard Up / Gluttony
+1111 = Auto-Guard / Defense
+1212 = Reload Spd / Hearing
+1313 = Recoil / Wide-Range
+1414 = Normal Up / Fire Res
+1515 = Pierce Up / ThunderRes
+1616 = Pellet Up / Dragon Res
+1717 = Normal S+ / Cold Res
+1818 = Pierce S+ / Gathering
+1919 = Pellet S+ / Whim
+1A1A = Crag S+ / Psychic
+1B1B = Clust S+ / Combo Rate
+1C1C = Status / Evasion
+1D1D = ElementAtk / LastingPwr
+1E1E = Bomb Boost / Loading
+1F1F = Hunger / Eating
+--------------------------------
+2020 = Gluttony / Tremor Res
+2121 = Attack / Crit Draw
+2222 = Defense / Constitutn
+2323 = Protection / Perception
+2424 = Hearing / PunishDraw
+2525 = Anti-Theft / Survivor
+2626 = Wide-Range / Dungmaster
+2727 = Transportr / Poison C+
+2828 = Fire Res / Sleep C+
+2929 = Water Res / C.Range C+
+2A2A = ThunderRes / Artillery
+2B2B = Ice Res / Ranger
+2C2C = Dragon Res / Fire Atk
+2D2D = Heat Res / ThunderAtk
+2E2E = Cold Res / Dragon Atk
+2F2F = Wind Res / Exhaust C+
+--------------------------------
+3030 = Gathering / Destroyer
+3131 = Spd Gather / Stam Drain
+3232 = Whim / Stam Recov
+3333 = Fate / Negate Poison   ----------
+3434 = Psychic / Negate Paralysis
+3535 = Rec Level / Negate Sleep
+3636 = Combo Rate / Halve Stun
+3737 = Combo Plus / Double Stun
+3838 = Evasion / Sneak
+3939 = Potential / Health +20
+3A3A = LastingPwr / Health -10
+3B3B = Stamina / Recovery Spd +1
+3C3C = Loading / Recovery Spd -1
+3D3D = Precision / Razor Sharp
+3E3E = Eating / Sharpness +1
+3F3F = Carving / Critical Eye +1
+--------------------------------
+[1 Slot / skill 2 repeat from 01]
+--------------------------------
+4040 = Tremor Res
+4141 = Evade Dist / Poison (and so on)
+4242 = Crit Draw
+4343 = SpeedSetup
+4444 = Constitutn
+4545 = Tranquilzr
+4646 = Perception
+4747 = FastCharge
+4848 = PunishDraw
+4949 = Blight Res
+4A4A = Survivor
+4B4B = Rapid Fire
+4C4C = Dungmaster
+4D4D = Antiseptic
+4E4E = Poison C+
+4F4F = Para C+
+--------------------------------
+skill 1 only
+--------------------------------
+50 = Sleep C+
+51 = Power C+
+52 = C.Range C+
+53 = Maestro
+54 = Artillery
+55 = Gloves Off
+56 = Ranger
+57 = Def Lock
+58 = Fire Atk
+59 = Water Atk
+5A = ThunderAtk
+5B = Ice Atk
+5C = Dragon Atk
+5D = Slice S+
+5E = Exhaust C+
+5F = Tenderizer
+--------------------------------
+60 = Destroyer
+61 = KO
+62 = Stam Drain
+63 = Sheathing
+64 = Stam Recov
+65 = No Skill
+66 = 
+67 = 
+68 = 
+69 = 
+6A = 
+6B = 
+6C = 
+6D = 
+6E = 
+6F = 
+--------------------------------
+[2 Slot / skill 2 repeat from 01]
+--------------------------------
+8080 = 
+
+--------------------------------
+[3 Slot / skill 2 repeat from 01]
+--------------------------------
+C0C0 = 
+
+--------------------------------
+--------------------------------
+--------------------------------
+
+--------------------------------
+060B = Handicraft / Fencing
+--------------------------------
+
+
+_C0 TEST Charm Skill1+30/Skill2+32
+_L 0x2174FE14 0x86026501
+_L 0x1174FE18 0x0000C34f
+
+
+
+0x2174FE14 0xKKKL6501
+0x1174FE18 0x0000XXZZ
+
+6501 = cannot be changed == absolute
+L = level 0-6
+KKK = -30 to 33 each count === [64 counter]
+      - DB6 = 24 each skill
+      - DB7 = 25 skill 1 and 24 skill 2
+      - DBF = 33 skill 1 and 24 skill 2
+      - DB0 = -30 skill 1 and 25 skill 2
+XX = skill 2
+ZZ = skill 1
+
+
+
+
+83:C8:E0:DA
+D3:B6:DB:DA
+
+93:A8:E5:DA
+
+([a-f0-9]{2})([a-f0-9]{2}) = ([^\/]+)\s\/\s([^\/]+)
+
+([a-f0-9]{2})([a-f0-9]{2})? = ([^\/]+)
