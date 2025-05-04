@@ -23,3 +23,10 @@ _L 0x2174FE14 0xA2816501
 _L 0x1174FE18 0x00004202
 ```
 
+## skill list
+```js
+let one = skillOne(),
+    two = skillTwo();
+console.log(one,two);
+
+```
