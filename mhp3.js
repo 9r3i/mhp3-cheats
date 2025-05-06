@@ -10,6 +10,36 @@ function x(s1,s2){
   return dec.toString(16).toUpperCase();
 }
 
+
+function bagItemCount(n=0){
+  let args=arguments,
+  length=args.length,
+  addr=0,
+  out=['_C0 Bag Items Count #1 to #'+length];
+  if(length<1){
+    return '';
+  }
+  for(let i=0;i<args.length;i++){
+    let na=(addr+(i*4)).toString(16)
+      .padStart(2,'0').toUpperCase(),
+    nc=Math.min(99,Math.max(args[i],1))
+      .toString(16).padStart(2,'0').toUpperCase();
+    out.push('_L 0x817AF8'+na+' 0x00010004');
+    out.push('_L 0x000000'+nc+' 0x00000000');
+  }
+  return out.join('\n');
+}
+
+
+function money(n=0){
+  let dex=n.toString(16).padStart(8,'0').toUpperCase(),
+  out=[
+    '_C0 Money '+n+' zenny',
+    '_L 0x217AC8D4 0x'+dex,
+  ];
+  return out.join('\n');
+}
+
 /*
 _C0 Rare 7 Charm (Auto-Guard+10/Fencing+10/Slot+3)
 _L 0x2174FE14 0xA2866501
@@ -17,7 +47,6 @@ _L 0x1174FE18 0x0000C611
 
 +64 / 0x40 on skill 2 for +1 slot
 */
-
 function talisman(
   snOne='00',
   snTwo='00',
