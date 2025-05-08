@@ -11,7 +11,48 @@ function x(s1,s2){
 }
 
 
-function bagItemCount(n=0){
+
+/* non-HD version */
+function guildCardName(str=''){
+  let chars=nameChars(),
+  out=['_C0 Guild Card Name Change to '+str],
+  base=0x7D0;
+  for(let i=0;i<8;i++){
+    let addr=(base+(i*2)).toString(16).padStart(3,'0').toUpperCase(),
+    char=str[i]&&chars.hasOwnProperty(str[i])?chars[str[i]]:'0000';
+    out.push('_L 0x11349'+addr+' 0x0000'+char);
+  }
+  return out.join('\n');
+}
+
+/* non-HD version */
+function changeName(str=''){
+  let chars=nameChars(),
+  out=['_C0 Name Change to '+str],
+  base=0x1FC;
+  for(let i=0;i<8;i++){
+    let addr=(base+(i*2)).toString(16).padStart(3,'0').toUpperCase(),
+    char=str[i]&&chars.hasOwnProperty(str[i])?chars[str[i]]:'0000';
+    out.push('_L 0x11349'+addr+' 0x0000'+char);
+  }
+  return out.join('\n');
+}
+
+
+function bagItemCountOne(k=1,n=1){
+  let na=((k-1)*4).toString(16)
+    .padStart(2,'0').toUpperCase(),
+  nc=Math.min(99,Math.max(n,1))
+    .toString(16).padStart(2,'0').toUpperCase();
+  let out=[
+    '_C0 Bag Items Count #'+k+' x'+n,
+    '_L 0x817AF8'+na+' 0x00010004',
+    '_L 0x000000'+nc+' 0x00000000',
+  ];
+  return out.join('\n');
+}
+
+function bagItemCount(){
   let args=arguments,
   length=args.length,
   addr=0,
@@ -244,6 +285,82 @@ function skillTwo(){
     "30":"Destroyer",
     "31":"Stam Drain",
     "32":"Stam Recov",
+  };
+}
+
+
+
+function nameChars(){
+  return {
+    ":": "003A",
+    ";": "003B",
+    "<": "003C",
+    "=": "003D",
+    ">": "003E",
+    "?": "003F",
+    "@": "0040",
+    "A": "0041",
+    "B": "0042",
+    "C": "0043",
+    "D": "0044",
+    "E": "0045",
+    "F": "0046",
+    "G": "0047",
+    "H": "0048",
+    "I": "0049",
+    "J": "004A",
+    "K": "004B",
+    "L": "004C",
+    "M": "004D",
+    "N": "004E",
+    "O": "004F",
+    "P": "0050",
+    "Q": "0051",
+    "R": "0052",
+    "S": "0053",
+    "T": "0054",
+    "U": "0055",
+    "V": "0056",
+    "W": "0057",
+    "X": "0058",
+    "Y": "0059",
+    "Z": "005A",
+    "[": "005B",
+    "\\": "00A5",
+    "]": "005D",
+    "^": "005E",
+    "_": "005F",
+    "`": "0060",
+    "a": "0061",
+    "b": "0062",
+    "c": "0063",
+    "d": "0064",
+    "e": "0065",
+    "f": "0066",
+    "g": "0067",
+    "h": "0068",
+    "i": "0069",
+    "j": "006A",
+    "k": "006B",
+    "l": "006C",
+    "m": "006D",
+    "n": "006E",
+    "o": "006F",
+    "p": "0070",
+    "q": "0071",
+    "r": "0072",
+    "s": "0073",
+    "t": "0074",
+    "u": "0075",
+    "v": "0076",
+    "w": "0077",
+    "x": "0078",
+    "y": "0079",
+    "z": "007A",
+    "{": "007B",
+    "|": "007C",
+    "}": "007D",
+    "~": "203E",
   };
 }
 
