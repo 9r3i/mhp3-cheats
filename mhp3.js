@@ -81,6 +81,8 @@ function money(n=0){
   return out.join('\n');
 }
 
+
+
 /*
 _C0 Rare 7 Charm (Auto-Guard+10/Fencing+10/Slot+3)
 _L 0x2174FE14 0xA2866501
@@ -94,7 +96,8 @@ function talisman(
   spOne=0,
   spTwo=0,
   slot=0,
-  rare=1){
+  rare=1,
+  ){
   let sOne=skillOne(),
   sTwo=skillTwo(),
   pts=skillPoint(spOne,spTwo),
@@ -118,6 +121,39 @@ function talisman(
     lineOne,
     lineTwo,
   ].join('\n');
+}
+
+function skillList(){
+  let one=skillOne(),
+      two=skillTwo(),
+      out=[
+        [
+          '----',
+          '---------------',
+          '---------------',
+        ].join('+'),
+        [
+          'key'.padEnd(4,' '),
+          'skill one'.padEnd(15,' '),
+          'skill two'.padEnd(15,' '),
+        ].join('|'),
+        [
+          '----',
+          '---------------',
+          '---------------',
+        ].join('+'),
+      ];
+  for(let k in one){
+    let stwo=two.hasOwnProperty(k)?two[k]:'';
+    out.push(
+        [
+          k.padEnd(4,' '),
+          one[k].padEnd(15,' '),
+          stwo.padEnd(15,' '),
+        ].join('|')
+    );
+  }
+  return out.join('\n');
 }
 
 function skillPoint(s1,s2){
