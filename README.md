@@ -27,8 +27,10 @@ _L 0x1174FE18 0x00004202
 ```js
 let one = skillOne(),
     two = skillTwo();
-console.log(one,two);
+console.table(one,two);
 
+// or just
+console.log(skillList());
 ```
 output:
 ```
@@ -137,5 +139,40 @@ key |skill one      |skill two
 5D  |Slice S+       |               
 5E  |Exhaust C+     |               
 5F  |Tenderizer     |               
+```
+
+
+
+# joker keys
+i put it in the cheat file, like this:
+```
+_C0 Joker (Select)
+_L 0xD0000005 0x10000001
+_C0 --------------------
+_C0 0001 = Select
+_C0 0008 = Start
+_C0 0010 = Up
+_C0 0020 = Right
+_C0 0040 = Down
+_C0 0080 = Left
+_C0 0100 = L
+_C0 0200 = R
+_C0 1000 = Triangle
+_C0 2000 = Circle
+_C0 4000 = X
+_C0 8000 = Square
+_C0 --------------------
+_L 0x00000000 0x00000000
+```
+this can be combined between 2 keys or more, for example:
+```
+_C0 Joker (Select)
+_L 0xD0000005 0x10000001
+
+_C0 Joker (Select+X)
+_L 0xD0000005 0x10004001
+
+_C0 Joker (Select+X+Square)
+_L 0xD0000005 0x1000C001
 ```
 
