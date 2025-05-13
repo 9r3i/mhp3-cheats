@@ -1,5 +1,9 @@
 # cheats list
 - 
+- change hunter name
+- change hunter gender
+- change hunter face to 0x07
+- change hunter voice to 0x11
 - hunter rank 1
 - hunter rank 6
 - reset all quests
@@ -21,6 +25,39 @@ this wont affect any of games data
 # 
 ```
 
+```
+
+# 
+```
+
+```
+
+# change hunter name
+```
+_C0 Change Hunter Name with Cat01 Comment
+_L 0x117ACF76 0x00000000
+_L 0x517ACF5E 0x0000001A
+_L 0x0174FCAC 0x00000000
+_L 0x517ACF5E 0x0000001A
+_L 0x017A8280 0x00000000
+```
+
+# change hunter gender
+```
+_C0 Change Hunter Gender (male=0/female=1)
+_L 0x2174FCC7 0x00000001
+```
+
+# change hunter face to 0x07
+```
+_C0 Change Hunter Face to 0x07
+_L 0x2174FCCA 0x00000007
+```
+
+# change hunter voice to 0x11
+```
+_C0 Change Hunter Voice to 0x11
+_L 0x2174FCC8 0x00000011
 ```
 
 # hunter rank 1
