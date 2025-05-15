@@ -1,6 +1,10 @@
 # cheats list
 - 
-- 
+- [money and point](#money-and-point)
+  - max yukumo point
+  - no yukumo point
+  - max money
+  - no money
 - [decoration](#decoration)
   - all weapon with 3 slots
   - all armor with 3 slots
@@ -50,6 +54,38 @@ this wont affect any of games data
 # 
 ```
 
+```
+
+# 
+```
+
+```
+
+
+# money and point
+
+## max yukumo point
+```
+_C0 Max Yukumo Points
+_L 0x217AC8CC 0x0098967F
+```
+
+## no yukumo point
+```
+_C0 No Yukumo Points
+_L 0x217AC8CC 0x00000000
+```
+
+## max money
+```
+_C0 Max Money
+_L 0x217AC8D4 0x0098967F
+```
+
+## no money
+```
+_C0 No Money
+_L 0x217AC8D4 0x00000000
 ```
 
 
