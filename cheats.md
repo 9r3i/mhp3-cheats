@@ -1,5 +1,12 @@
 # cheats list
 - 
+- [items](#items)
+  - bag items count #1 to #8
+  - bag item #24 10x
+  - bag item #1 99x
+  - bag items 99x
+  - bag items 32x
+  - box items 32x
 - [money and point](#money-and-point)
   - max yukumo point
   - no yukumo point
@@ -59,6 +66,80 @@ this wont affect any of games data
 ## 
 ```
 
+```
+
+## 
+```
+
+```
+
+## 
+```
+
+```
+
+## 
+```
+
+```
+
+
+# items
+
+## bag items count #1 to #8
+```
+_C0 Bag Items Count #1 to #8
+_L 0x817AF800 0x00010004
+_L 0x00000005 0x00000000
+_L 0x817AF804 0x00010004
+_L 0x00000002 0x00000000
+_L 0x817AF808 0x00010004
+_L 0x00000014 0x00000000
+_L 0x817AF80C 0x00010004
+_L 0x00000008 0x00000000
+_L 0x817AF810 0x00010004
+_L 0x00000002 0x00000000
+_L 0x817AF814 0x00010004
+_L 0x00000002 0x00000000
+_L 0x817AF818 0x00010004
+_L 0x0000000A 0x00000000
+_L 0x817AF81C 0x00010004
+_L 0x0000000A 0x00000000
+```
+
+## bag item #24 10x
+```
+_C0 10x Bag Item #24
+_L 0x817AF85C 0x00010004
+_L 0x0000000A 0x00000000
+```
+
+## bag item #1 99x
+```
+_C0 99x Bag Item #1
+_L 0x817AF800 0x00010004
+_L 0x00000063 0x00000000
+```
+
+## bag items 99x
+```
+_C0 99x Bag Items
+_L 0x817AF800 0x00180004
+_L 0x00000063 0x00000000
+```
+
+## bag items 32x
+```
+_C0 32x All Bag Items
+_L 0x817AF800 0x00180004
+_L 0x00000020 0x00000000
+```
+
+## box items 32x
+```
+_C0 32x All Box Items
+_L 0x81752CF6 0x03D20004
+_L 0x00000050 0x00000000
 ```
 
 
