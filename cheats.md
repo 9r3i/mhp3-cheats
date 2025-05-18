@@ -1,9 +1,30 @@
 # cheats list
 - 
+- [monster](#monster)
+  - monster size x256 (200%)
+  - monster size x1
+  - monster size x1 (select+down)
+- [battle](#battle)
+  - freeze hp
+  - freeze stamina consumption
+  - freeze sharpness
+- [hunter skill](#hunter-skill)
+  - long sword gauge max
+  - unlimited traps and bomb trick
+  - map
+  - auto tracker
+  - health regen augmentation
+- [weapons](#weapons)
+  - ammo no reload
+  - bowgun ammo +9
+  - all weapons affinity 127%
+  - all weapons defence +255
+  - all weapons affinity and defence
 - [items](#items)
   - bag items count #1 to #8
   - bag item #24 10x
   - bag item #1 99x
+  - bag items 1-8 count 20x
   - bag items 99x
   - bag items 32x
   - box items 32x
@@ -52,35 +73,165 @@ _L 0x00000000 0x00000000
 ```
 this wont affect any of games data
 
+## header
+```
+_S NPJB-40001
+_G Monster Hunter Portable 3rd HD
+_C0 +++++[ Personal ]+++++
+_L 0x00000000 0x00000000
+```
+
 
 ## 
 ```
 
 ```
 
-## 
+
+# monster
+
+## monster size x256 (200%)
+```
+_C0 Monster Size x256 (200%)
+_L 0x619B0AE0 0x40000000
+_L 0x00020001 0x000000D0
 ```
 
+## monster size x1
+```
+_C0 Monster Size x1
+_L 0x619B0AE0 0x3F010000
+_L 0x00020001 0x000000D0
 ```
 
-## 
+## monster size x1 (select+down)
+```
+_C0 Monster Size x1 (Select+Down)
+_L 0xD0000005 0x10000041
+_L 0x619B0AE0 0x3F010000
+_L 0xD0000005 0x10000041
+_L 0x00020001 0x000000D0
 ```
 
+
+# battle
+
+## freeze hp
+```
+_C0 Freeze HP
+_L 0xE0015FA8 0x0185E610
+_L 0x200AB41C 0x96020288
 ```
 
-## 
+## freeze stamina consumption
+```
+_C0 Freeze Stamina Consumption
+_L 0xE0025FA8 0x0185E610
+_L 0x218F07B4 0x4600A505
+_L 0x218F07C4 0x4601083C
 ```
 
+## freeze sharpness
+```
+_C0 Freeze Sharpness
+_L 0xE0025FA8 0x0185E610
+_L 0x218F0024 0x34020001
+_L 0x218F00E4 0x24130000
 ```
 
-## 
+
+# hunter skill
+
+## long sword gauge max
+```
+_C0 Long Sword Gauge Max
+_L 0x00E4AD18 0x00000064
+_L 0x00E4AD1A 0x00000003
+_L 0x10E4AD1E 0x00000700
 ```
 
+## unlimited traps and bomb trick
+```
+_C0 Unlimited Traps and Bomb Trick
+_L 0x019B88EC 0x00000000
+_L 0x019B890C 0x00000000
 ```
 
-## 
+## map
+```
+_C0 Map
+_L 0xE0015FA8 0x0185E610
+_L 0x2196658C 0x34020001
 ```
 
+## auto tracker
+```
+_C0 Auto Tracker
+_L 0xE0025FA8 0x0185E610
+_L 0x219698A4 0x34020080
+```
+
+## health regen augmentation
+```
+_C0 Health Regen Augmentation
+_L 0xE00A03E0 0x0187B91E
+_L 0x2187B91C 0x0A814028
+_L 0x218500A0 0x12800007
+_L 0x218500A4 0x0302D8C2
+_L 0x218500A8 0x86810246
+_L 0x218500AC 0x102C0004
+_L 0x218500B0 0x0361D821
+_L 0x218500B4 0x868C0288
+_L 0x218500B8 0x036C602D
+_L 0x218500BC 0xA28C0246
+_L 0x218500C0 0x03E00008
+```
+
+
+# weapons
+
+## ammo no reload
+```
+_C0 Ammo no Reload
+_L 0x00E4A4F0 0x0000000C
+```
+
+## bowgun ammo +9
+```
+_C0 Bowgun Ammo +9
+_L 0x00E4A4F1 0x00000009
+_L 0x00E4A4B8 0x00000009
+```
+
+## all weapons affinity 127%
+```
+_C0 All Weapons Affinity 127%
+_L 0x80192F35 0x030E001C
+_L 0x0000007F 0x00000000
+_L 0x8018EB75 0x00D70050
+_L 0x0000007F 0x00000000
+```
+
+## all weapons defence +255
+```
+_C0 All Weapons Defence +255
+_L 0x80192F34 0x030E001C
+_L 0x000000FF 0x00000000
+_L 0x8018EB74 0x00D70050
+_L 0x000000FF 0x00000000
+```
+
+## all weapons affinity and defence
+```
+_C0 All Weapons Affinity 127% and Defence +255
+_L 0x80192F35 0x030E001C
+_L 0x0000007F 0x00000000
+_L 0x8018EB75 0x00D70050
+_L 0x0000007F 0x00000000
+_L 0x80192F34 0x030E001C
+_L 0x000000FF 0x00000000
+_L 0x8018EB74 0x00D70050
+_L 0x000000FF 0x00000000
 ```
 
 
@@ -119,6 +270,13 @@ _L 0x0000000A 0x00000000
 _C0 99x Bag Item #1
 _L 0x817AF800 0x00010004
 _L 0x00000063 0x00000000
+```
+
+## bag items 1-8 count 20x
+```
+_C0 20x Bag Items Slot 1-8
+_L 0x817AF800 0x00080004
+_L 0x00000014 0x00000000
 ```
 
 ## bag items 99x
