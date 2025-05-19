@@ -1,5 +1,17 @@
 # cheats list
 - 
+- 
+  - 
+  - 
+  - 
+- [attack](#attack)
+  - attack x1 normal
+  - attack x2
+  - attack x4
+  - attack x8
+  - attack x16
+  - attack x32
+  - long sword gauge max
 - [monster](#monster)
   - monster size x256 (200%)
   - monster size x1
@@ -85,6 +97,75 @@ _L 0x00000000 0x00000000
 ## 
 ```
 
+```
+
+## 
+```
+
+```
+
+
+# attack
+
+## attack x1 normal
+```
+_C0 Attack x1 normal [Select+Start]
+_L 0xD0000005 0x10000009
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000009
+_L 0x200ad96c 0x00031830
+```
+
+## attack x2
+```
+_C0 Attack x2 [L+R]
+_L 0xD0000005 0x10000300
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000300
+_L 0x200ad96c 0x00031840
+```
+
+## attack x4
+```
+_C0 Attack x4 [L+R]
+_L 0xD0000005 0x10000300
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000300
+_L 0x200ad96c 0x00031880
+```
+
+## attack x8
+```
+_C0 Attack x8 [L+R]
+_L 0xD0000005 0x10000300
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000300
+_L 0x200ad96c 0x000318C0
+```
+
+## attack x16
+```
+_C0 Attack x16 [L+R]
+_L 0xD0000005 0x10000300
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000300
+_L 0x200ad96c 0x00031900
+```
+
+## attack x32
+```
+_C0 Attack x32 [L+R]
+_L 0xD0000005 0x10000300
+_L 0x200ad964 0x00000000
+_L 0xD0000005 0x10000300
+_L 0x200ad96c 0x00031940
+```
+
+## long sword gauge max
+```
+_C0 Long Sword Gauge Max [R+L]
+_L 0xD0000005 0x10000300
+_L 0x00E4AD18 0x00000064
 ```
 
 
